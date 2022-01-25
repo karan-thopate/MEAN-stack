@@ -1,0 +1,8 @@
+<ul class="listings" *ngIf="lisings$ | async as listings"> 
+    <!-- async is used for when anguler automacitcally subscribe and unsubscribe -->
+    <li *ngFor="let listing of listings" >
+        <h2>{{listing.title}}</h2>
+        <h4>Price: {{listing.price}} | Locality: {{listing.locality}}</h4>
+        <a [routerLink] = "listing._id" >View Details</a>
+    </li>
+</ul>
